@@ -42,15 +42,27 @@
                    Foreground="DarkRed"
                    Content="Resistance"
                    Height="50" Margin="0,42,0,43" Width="100"/>
-            <Label Grid.Column="0"
-                   Grid.Row="2"
-                   HorizontalAlignment="Right"
-                   VerticalContentAlignment="Center"
-                   HorizontalContentAlignment="Right"
-                   FontSize="18"
-                   Foreground="DarkGreen"
-                   Content="Current:"
-                   Height="50" Margin="0,42,0,43" Width="100"/>
+            <TextBox Name="TextBox_Voltage"
+                     Grid.Column="1"
+                     Grid.Row="0"
+                     Height="30"
+                     Width="100"
+                     HorizontalAlignment="Left"
+                     VerticalContentAlignment="Center"/>
+            <TextBox Name="TextBox_Resistance"
+                     Grid.Column="1"
+                     Grid.Row="1"
+                     Height="30"
+                     Width="100"
+                     HorizontalAlignment="Left"
+                     VerticalContentAlignment="Center"/>
+            <TextBox Name="TextBox_Current"
+                     Grid.Column="1"
+                     Grid.Row="2"
+                     Height="30"
+                     Width="100"
+                     HorizontalAlignment="Left"
+                     VerticalContentAlignment="Center"/>
             <Label Grid.Column="0"
                    Grid.Row="0"
                    HorizontalAlignment="Right"
@@ -60,11 +72,63 @@
                    Foreground="Orange"
                    Content="Voltage:"
                    Height="50" Margin="0,42,0,43" Width="100"/>
+            <Label Grid.Column="0"
+                   Grid.Row="2"
+                   HorizontalAlignment="Right"
+                   VerticalContentAlignment="Center"
+                   HorizontalContentAlignment="Right"
+                   FontSize="18"
+                   Foreground="DarkGreen"
+                   Content="Current:"
+                   Height="50" Margin="0,42,0,43" Width="100"/>
+
+            <ListBox Name="List_Box_Battery"
+                Grid.Row="3"
+                     Height="30"
+                     Width="200"
+                     Background="WhiteSmoke">
+                <ListBoxItem Content="Add a Battery"/>
+                
+            </ListBox>
+            
+           
         </Grid>
         <StackPanel 
         Grid.Row="1"
         Grid.Column="1"
         Orientation="Vertical">
+            <Image Source="Ohm.jpg" 
+                   Height="150"
+                   Margin="2.5"/>
+            <Button Name="Button_Help"
+                    Height="30"
+                    Width="100"
+                    Margin="2.5"
+                    Content="Help" Background="#FFB3DAF0"/>
+            <Button Name="Button_Exit"
+                    Height="30"
+                    Width="100"
+                    Margin="2.5"
+                    Content="Exit" Background="#FFB3DAF0"/>
+            <RadioButton Name="Radio_Button_Voltage"
+                         Content="Voltage"
+                         HorizontalAlignment="Left"
+                         Margin="0,200,0,5"
+                         FontSize="16"
+                         Foreground="Orange" Checked="Radio_Button_Voltage_Checked"/>
+            <RadioButton Name="Radio_Button_Resistance"
+                         Content="Resistance"
+                         HorizontalAlignment="Left"
+                         Margin= "0,5"
+                         FontSize="16"
+                         Foreground="DarkRed" Checked="Radio_Button_Resistance_Checked"/>
+        
+            <RadioButton Name="Radio_Button_Current"
+                         Content="Current"
+                         HorizontalAlignment="left"
+                         Margin="0,5"
+                         FontSize="16"
+                         Foreground="DarkGreen" Checked="Radio_Button_Current_Checked"/>
 
         </StackPanel>
     </Grid>
