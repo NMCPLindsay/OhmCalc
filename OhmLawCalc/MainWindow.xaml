@@ -20,6 +20,11 @@
             <ColumnDefinition
                 Width="1*"/>
         </Grid.ColumnDefinitions>
+        <Label Content="OHM'S LAW CALCULATOR"
+               VerticalAlignment="Center"
+               HorizontalAlignment="Center"
+               FontSize="30"
+               Foreground="CadetBlue"/>
         <Grid Grid.Row="1"
               Grid.Column="0">
             <Grid.ColumnDefinitions>
@@ -40,8 +45,8 @@
                    HorizontalContentAlignment="Right"
                    FontSize="18"
                    Foreground="DarkRed"
-                   Content="Resistance"
-                   Height="50" Margin="0,42,0,43" Width="100"/>
+                   Content="Resistance(Ohms)"
+                   Height="50" Margin="0,42,0,43" Width="200"/>
             <TextBox Name="TextBox_Voltage"
                      Grid.Column="1"
                      Grid.Row="0"
@@ -70,7 +75,7 @@
                    HorizontalContentAlignment="Right"
                    FontSize="18"
                    Foreground="Orange"
-                   Content="Voltage:"
+                   Content="Voltage (V):"
                    Height="50" Margin="0,42,0,43" Width="100"/>
             <Label Grid.Column="0"
                    Grid.Row="2"
@@ -79,17 +84,46 @@
                    HorizontalContentAlignment="Right"
                    FontSize="18"
                    Foreground="DarkGreen"
-                   Content="Current:"
-                   Height="50" Margin="0,42,0,43" Width="100"/>
+                   Content="Current (Amps):"
+                   Height="50" Margin="0,42,0,43" Width="150"/>
 
-            <ListBox Name="List_Box_Battery"
-                Grid.Row="3"
-                     Height="30"
-                     Width="200"
-                     Background="WhiteSmoke">
-                <ListBoxItem Content="Add a Battery"/>
-                
-            </ListBox>
+            <ComboBox Name="ComboBox_Battery"
+                        Grid.Row="3"
+                      Height="30"
+                      Width="200">
+                <!--<ComboBoxItem Content="Add a Battery"/>-->
+                <ComboBoxItem Content="20 Amp Battery"/>
+                <ComboBoxItem Content="30 Amp Battery"/>
+
+
+            </ComboBox>
+
+
+            <StackPanel Grid.Row="3"
+                        Grid.Column="1"
+                        Orientation="Vertical">
+                <!--<Button Name="Button_Enter"
+                        Content="Enter"
+                        Height=" 30"
+                        Width="100"
+                        HorizontalAlignment="Left"
+                        Margin="0,35,0,2.5"
+                        Background="#FFB3DAF0" Click="Button_Enter_Click"/>-->
+                <Label Name="Label_Safe"
+                       Height="30"
+                       Width="200"
+                       HorizontalAlignment="Left"
+                       HorizontalContentAlignment="Left"
+                       VerticalContentAlignment="Center"/>
+                <!--<Button Name="Button_Import" 
+                        Content="Import"
+                        Height=" 30"
+                        Width="100"
+                        HorizontalAlignment="Left"
+                        Margin="0,2.5,0,0"
+                        Background="#FFB3DAF0"/>-->
+            
+            </StackPanel>
             
            
         </Grid>
@@ -104,41 +138,48 @@
                     Height="30"
                     Width="100"
                     Margin="2.5"
-                    Content="Help" Background="#FFB3DAF0"/>
+                    Content="Help" 
+                    Background="#FFB3DAF0" Click="Button_Help_Click"/>
             <Button Name="Button_Calculate"
                     Height="30"
                     Width="100"
                     Margin="2.5"
-                    Content="Calculate" Background="#FFB3DAF0" Click="Button_Calculate_Click"/>
+                    Content="Calculate" 
+                    Background="#FFB3DAF0" 
+                    Click="Button_Calculate_Click"/>
             <Button Name="Button_Safe_Check"
                     Height="30"
                     Width="100"
                     Margin="2.5"
-                    Content="Saftey Check" Background="#FFB3DAF0"/>
+                    Content="Saftey Check" 
+                    Background="#FFB3DAF0" Click="Button_Safe_Check_Click"/>
             <Button Name="Button_Exit"
                     Height="30"
                     Width="100"
                     Margin="2.5"
-                    Content="Exit" Background="#FFB3DAF0"/>
+                    Content="Exit" Background="#FFB3DAF0" Click="Button_Exit_Click"/>
             <RadioButton Name="Radio_Button_Voltage"
                          Content="Voltage"
                          HorizontalAlignment="Left"
                          Margin="0,200,0,5"
                          FontSize="16"
-                         Foreground="Orange" Checked="Radio_Button_Voltage_Checked"/>
+                         Foreground="Orange" 
+                         Checked="Radio_Button_Voltage_Checked"/>
             <RadioButton Name="Radio_Button_Resistance"
                          Content="Resistance"
                          HorizontalAlignment="Left"
                          Margin= "0,5"
                          FontSize="16"
-                         Foreground="DarkRed" Checked="Radio_Button_Resistance_Checked"/>
+                         Foreground="DarkRed"
+                         Checked="Radio_Button_Resistance_Checked"/>
         
             <RadioButton Name="Radio_Button_Current"
                          Content="Current"
                          HorizontalAlignment="left"
                          Margin="0,5"
                          FontSize="16"
-                         Foreground="DarkGreen" Checked="Radio_Button_Current_Checked"/>
+                         Foreground="DarkGreen"
+                         Checked="Radio_Button_Current_Checked"/>
 
         </StackPanel>
     </Grid>

@@ -1,0 +1,68 @@
+﻿<Window x:Class="OhmLawCalc.HelpWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OhmLawCalc"
+        mc:Ignorable="d"
+              Title="Help Window" Height="750" Width="700"
+        Background="Honeydew" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0"
+                    Orientation="Horizontal">
+            <Button Name="Button_Close"
+                    Content="Close"
+                    Width="100"
+                    Height="30"
+                    HorizontalAlignment="Center"
+                    Margin="300,0,300,0"
+                    Background="#FFB3DAF0" Click="Button_Close_Click"/>
+
+        </StackPanel>
+        <StackPanel 
+            Grid.Row="1"
+            Orientation="Vertical">
+            <TextBlock            
+            FontSize="16"
+            TextAlignment="Center"
+            Margin="0,0,0,5"
+            Text="Welcome to the help window."/>
+            <TextBlock            
+            FontSize="16"
+            TextAlignment="Left"
+            Text="1) Select radio button for value you are looking for."/>
+            <TextBlock 
+                FontSize="16"
+                TextAlignment="Left"
+                Text="2.) Enter values for remaining factors."/>
+            <TextBlock 
+                FontSize="16"
+                TextAlignment="Left"
+                Text="3.) Press 'Calculate' Button to get result."/>
+            <TextBlock 
+                FontSize="16"
+                TextAlignment="Left"
+                Margin="0,10,0,0"
+                Text="For Safety Check:"/>
+            <TextBlock 
+                FontSize="16"
+                TextAlignment="Left"
+                Text="1.) Perform previous steps."/>
+            <TextBlock 
+                FontSize="16"
+                TextAlignment="Left"
+                Text="2.) Select battery in Combo Box."/>
+            <TextBlock 
+                FontSize="16"
+                TextAlignment="Left"
+                Text="3.) Press 'Safety Check' Button to see if device is stable."/>
+
+
+        </StackPanel>
+        
+    </Grid>
+</Window>
