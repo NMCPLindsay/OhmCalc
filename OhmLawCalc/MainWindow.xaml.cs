@@ -64,7 +64,7 @@ namespace OhmLawCalc
             
         }
 
-        private void GetEquation(bool[] equation)
+        private void GetEquationResult()
         {
             double R, A, V;
             if (Radio_Button_Voltage.IsChecked.Value)
@@ -86,8 +86,17 @@ namespace OhmLawCalc
                 double.TryParse(TextBox_Voltage.Text, out V);
                 double.TryParse(TextBox_Resistance.Text, out R);
                 A= V /R;
-                TextBox_Resistance.Text = A.ToString();
+                TextBox_Current.Text = A.ToString();
             }
+            else
+            {
+                
+            }
+        }
+
+        private void Button_Calculate_Click(object sender, RoutedEventArgs e)
+        {
+            GetEquationResult();
         }
     }
 }

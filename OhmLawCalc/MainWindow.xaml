@@ -105,6 +105,16 @@
                     Width="100"
                     Margin="2.5"
                     Content="Help" Background="#FFB3DAF0"/>
+            <Button Name="Button_Calculate"
+                    Height="30"
+                    Width="100"
+                    Margin="2.5"
+                    Content="Calculate" Background="#FFB3DAF0" Click="Button_Calculate_Click"/>
+            <Button Name="Button_Safe_Check"
+                    Height="30"
+                    Width="100"
+                    Margin="2.5"
+                    Content="Saftey Check" Background="#FFB3DAF0"/>
             <Button Name="Button_Exit"
                     Height="30"
                     Width="100"
